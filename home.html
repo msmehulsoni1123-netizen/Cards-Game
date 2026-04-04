@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="F:/Coding Thunder/game/Img Files/cardicon.png">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta charset="UTF-8">
+
+        <title>Concentration</title>
+        
+        <style>
+            body {
+                background-image: url('F:/Coding Thunder/game/Img Files/gamecardbg.jpg');
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 0;
+            }
+            #header {
+                display: flex;
+                height: 10vh;
+                margin: 5vh;
+            }
+            #heading {
+                align-self: auto;
+                margin: auto;
+                align-self: center;
+                text-decoration: none;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 6.5vh;
+                background: linear-gradient(to right, gold,aqua);
+                background-clip: text;
+                color: transparent;
+            }
+            #log_page:link, #log_page:visited {
+                color: white;
+                background-color:blue;
+                padding: 20px;
+                text-decoration: none;
+                margin: 1vw;
+                text-align: right;
+                font-size: 1.5vw;
+                height: fit-content;
+                width: fit-content;
+                position: relative;
+                border: 3px solid silver;
+                border-radius: 10px;
+            }
+            #log_page:active, #log_page:hover {
+                color: gold;
+                background-color: navy;
+                border: 3px solid gold;
+                border-radius: 10px;
+            }
+            #Home_Page:link, #Home_Page:visited {
+                color: transparent;
+                padding: 20px;
+                text-decoration: none;
+                margin: 1vw;
+                text-align: left;
+                font-size: 1.5vw;
+                height: fit-content;
+                width: fit-content;
+                position: relative;
+                border-radius: 10px;
+                border: 3px none silver;
+            }
+            main {
+                display: flex;
+                height: 60vh;
+                margin: 5vh;
+                justify-content: center;
+                align-items: center;
+            }
+            #username {
+                color: white;
+                font-family: cursive;
+                padding: 20px;
+                font-size: xx-large;
+                text-align: center;
+            }
+            #name {
+                color: aqua;
+                background-color: transparent;
+                text-decoration: none;
+                border-bottom: 5px solid white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: x-large;
+                height: fit-content;
+                width: fit-content;
+                padding: 20px;
+                text-align: center;
+                margin: 1vw;
+                outline: none;
+            }
+            footer {
+                display: flex;
+                height: 10vh;
+                background-color: rgba(0, 0, 0, 0.516);
+                justify-content: flex-start;
+                align-items: flex-end;
+            }
+            p {
+                color: white;
+                font-family: monospace;
+                padding: 10px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <a href="home.html" id="Home_Page">____</a>
+            <p id="heading">Concentration</p>  
+            <a href="login.html" id="log_page">Log In</a>  
+            <div id="none"><p>Log in</p></div>
+        </header>
+        <main>
+            <form>
+                <label for="username" id="username">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter Your Name</label><br>
+                <input type="text" name="username" id="name" required>
+                <a href="game.html" id="tocardgmae">Start Game</a>
+            </form>
+        </main>
+        <footer>
+            <p>Thank you for testing out my very first projects</p><br>
+            <p>It would be most <b>gladding</b> for me to have your review/suggestions regarding this project</p><br>
+            <p>If you find any bug or error kindly send me a mail on my gmail address <b>msmehulsoni1123@gmail.com</b> those are much appreciated.</p>
+        </footer>
+    </body>
+</html>
