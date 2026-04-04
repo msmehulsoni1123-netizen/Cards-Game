@@ -1,0 +1,39 @@
+body {
+    background-image: url('F:/Coding Thunder/game/Img Files/gamecardbg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+#intro {
+    text-align: center;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    background: linear-gradient(to right, gold,aqua);
+    background-clip: text;
+    color: transparent;
+
+}
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+}
+.card {
+    background-image: url('F:/Coding Thunder/game/Img Files/cardback.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: white;
+    border: 5px groove black;
+    height: 27.8vh;
+    width: 7.8vw;
+    margin: 1vw;
+}
+.card:hover {
+    border-color: gold;
+}
