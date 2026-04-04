@@ -6,22 +6,69 @@ body {
     background-size: cover;
     margin: 0;
 }
+#header {
+    display: flex;
+    height: 5vh;
+    margin: 2vh;
+}
 #intro {
-    text-align: center;
+    align-self: auto;
+    margin: auto;
     text-decoration: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: large;
+    font-size: xx-large;
     background: linear-gradient(to right, gold,aqua);
     background-clip: text;
     color: transparent;
-
+}
+#Home_Page:link, #Home_Page:visited {
+    color: white;
+    background-color: blue;
+    padding: 20px;
+    text-decoration: none;
+    margin: 1vw;
+    text-align: left;
+    font-size: 1.5vw;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    border: 3px solid silver;
+    border-radius: 10px;
+}
+#Home_Page:active, #Home_Page:hover {
+    color: gold;
+    background-color: navy;
+    border: 3px solid gold;
+    border-radius: 10px;
+}
+#log_page:link, #log_page:visited {
+    color: white;
+    background-color:blue;
+    padding: 20px;
+    text-decoration: none;
+    margin: 1vw;
+    text-align: right;
+    font-size: 1.5vw;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    border: 3px solid silver;
+    border-radius: 10px;
+}
+#log_page:active, #log_page:hover {
+    color: gold;
+    background-color: navy;
+    border: 3px solid gold;
+    border-radius: 10px;
 }
 #card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
-    height: 100vh;
+    height: 90vh;
+    margin-top: 6vh;
+    margin-bottom: 8vh;
 }
 .card {
     background-image: url('F:/Coding Thunder/game/Img Files/cardback.jpg');
