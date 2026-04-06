@@ -8,7 +8,7 @@ body {
 }
 #header {
     display: flex;
-    height: 5vh;
+    height: 9vh;
     margin: 2vh;
 }
 #intro {
@@ -82,5 +82,10 @@ body {
     margin: 1vw;
 }
 .card:hover {
-    border-color: gold;
+    border-top-color: gold;
+    border-left-color: gold;
+    border-right-style: ridge;
+    border-bottom-style: ridge;
+    border-right-color: magenta;
+    border-bottom-color: magenta;
 }

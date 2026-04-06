@@ -10,6 +10,9 @@
         <title>Concentration</title>
         
         <style>
+            * {
+                box-sizing: border-box;
+            }
             body {
                 background-image: url('F:/Coding Thunder/game/Img Files/gamecardbg.jpg');
                 background-attachment: fixed;
@@ -67,48 +70,67 @@
                 border-radius: 10px;
                 border: 3px none silver;
             }
-            main {
+            form {
                 display: flex;
-                height: 60vh;
+                height: 65vh;
                 margin: 5vh;
+                flex-flow: column nowrap;
                 justify-content: center;
-                align-items: center;
             }
             #username {
                 color: white;
                 font-family: cursive;
-                padding: 20px;
                 font-size: xx-large;
-                text-align: center;
+                align-self: center;
+                margin: 20px;
             }
             #name {
-                color: aqua;
+                color: #00FFFF;
                 background-color: transparent;
                 text-decoration: none;
-                border-bottom: 5px solid white;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-size: x-large;
                 height: fit-content;
                 width: fit-content;
+                outline-style: none;
+                text-align: center;
+                align-self: center;
+                margin: 20px;
+            }
+            #tocardgame {
+                position: relative;
+                align-self: center;
+                margin: 50px;
+                width: fit-content;
+                height: fit-content;
                 padding: 20px;
+                font-size: 2vw;
+                border: 5px solid transparent;
+                text-decoration: none;
                 text-align: center;
                 color: rgb(255, 217, 0);
                 background-color: blue;
-                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
             footer {
                 display: flex;
                 height: 10vh;
                 background-color: rgba(0, 0, 0, 0.516);
-                justify-content: flex-start;
-                align-items: flex-end;
             }
-            p {
+            li {
                 color: white;
-                font-family: monospace;
-                padding: 10px;
-                margin: 5px;
+                font-family: serif;
+                padding: 5px;
+                font-size: medium;
+            }
+            #tocardgame:hover, #tocardgame:active {
+                box-shadow: 0 0 40px 10px goldenrod;
+                background-color: navy;
+                border-style: solid;
+                border-color: gold;
+                border-width: 5px;
+                color: gold;
+                                
             }
         </style>
     </head>
@@ -117,19 +139,19 @@
             <a href="home.html" id="Home_Page">____</a>
             <p id="heading">Concentration</p>  
             <a href="login.html" id="log_page">Log In</a>  
-            <div id="none"><p>Log in</p></div>
         </header>
         <main>
-            <form>
-                <label for="username" id="username">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter Your Name</label><br>
-                <input type="text" name="username" id="name" required>
-                <a href="game.html" id="tocardgmae">Start Game</a>
+            <form action="game.html">
+                <label for="username" id="username">&nbsp;Enter Your Name</label>
+                <input type="text" name="username" id="name" placeholder="Enter Name" required>
+                <input href="game.html" type="submit" id="tocardgame" name="username" value="Start Game">
             </form>
         </main>
         <footer>
-            <p>Thank you for testing out my very first projects</p><br>
-            <p>It would be most <b>gladding</b> for me to have your review/suggestions regarding this project</p><br>
-            <p>If you find any bug or error kindly send me a mail on my gmail address <b>msmehulsoni1123@gmail.com</b> those are much appreciated.</p>
+            <ul>
+                <li>I feel a great amount of pleasure knowing you tested my very first project. It would be most gladdening to receive your reviews and suggestions.</li>
+            </ul>    
+            
         </footer>
     </body>
 </html>
