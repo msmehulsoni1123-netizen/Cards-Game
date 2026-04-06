@@ -10,6 +10,9 @@
             * {
                 box-sizing: border-box;
             }
+            html {
+                margin: 0px;
+            }
             body {
                 background-image: url('F:/Coding Thunder/game/Img Files/gamecardbg.jpg');
                 background-attachment: fixed;
@@ -17,16 +20,29 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
+            #right-section {
+                display: flex;
+                height: 100vh;
+                width: 60vw;
+            }
+            .none {
+                background-color: white;
+            }
+            #left-section {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                width: 40vw;
+            }
         </style>
     </head>
     <body>
         <header></header>
         <section class="sections-mid" id="left_section">
             <h1>Log In</h1>
-            <label></label>
-            <input name="">
+            <input type="text" name="username" id="username" placeholder="Username" required>
+            <input type="password" name="password" id="pass" placeholder="Password" required>
         </section>
-        <section class="sections-mid" id="right-section">
-        </section>
+        <section class="sections-mid" id="right-section"><div class="none"><p>hhhh</p></div></section>
     </body>
 </html>
