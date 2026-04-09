@@ -15,15 +15,13 @@ body {
     align-self: auto;
     margin: auto;
     text-decoration: none;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: xx-large;
-    background: linear-gradient(to right, gold,aqua);
-    background-clip: text;
-    color: transparent;
+    color: white;
+    text-shadow: 0 0 0.8vw rgb(255, 31, 255);
 }
 #Home_Page:link, #Home_Page:visited {
     color: white;
-    background-color: blue;
+    background-color: indigo;
     padding: 20px;
     text-decoration: none;
     margin: 1vw;
@@ -32,18 +30,19 @@ body {
     height: fit-content;
     width: fit-content;
     position: relative;
-    border: 3px solid silver;
+    border: 3px solid white;
     border-radius: 10px;
 }
 #Home_Page:active, #Home_Page:hover {
-    color: gold;
-    background-color: navy;
-    border: 3px solid gold;
+    color: white;
+    background-color: rgb(100, 0, 180);
+    border: 3px solid white;
+    box-shadow: 0 0 10px 10px magenta;
     border-radius: 10px;
 }
 #log_page:link, #log_page:visited {
     color: white;
-    background-color:blue;
+    background-color:indigo;
     padding: 20px;
     text-decoration: none;
     margin: 1vw;
@@ -52,14 +51,15 @@ body {
     height: fit-content;
     width: fit-content;
     position: relative;
-    border: 3px solid silver;
+    border: 3px solid rgb(255, 255, 255);
     border-radius: 10px;
 }
 #log_page:active, #log_page:hover {
-    color: gold;
-    background-color: navy;
-    border: 3px solid gold;
+    color: white;
+    background-color: rgb(100, 0, 180);
+    border: 3px solid white;
     border-radius: 10px;
+    box-shadow: 0 0 10px 10px magenta;
 }
 #card-container {
     display: flex;
@@ -71,17 +71,18 @@ body {
     margin-bottom: 8vh;
 }
 .card {
-    background-image: url('Img Files/cardicon.png');
+    background-image: url('Img Files???/cardicon.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: white;
-    border-style: none;
-    border-radius: 10px;
+    background-color: rgb(0, 0, 92);
+    border:3px solid white;
+    border-radius: 1vw;
     height: 7.8vw;
     width: 7.8vw;
     margin: 1vw;
 }
 .card:hover {
-    box-shadow: 0 0 1vw 0.5vw cyan;
+    border-color: rgb(183, 247, 247);
+    box-shadow: 0 0 0.7vw 0.8vw cyan;
 }
