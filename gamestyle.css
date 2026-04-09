@@ -15,9 +15,10 @@ body {
     align-self: auto;
     margin: auto;
     text-decoration: none;
+    font-family: Audiowide;
     font-size: xx-large;
     color: white;
-    text-shadow: 0 0 0.8vw rgb(255, 31, 255);
+    text-shadow: 0 0 0.8vw cyan;
 }
 #Home_Page:link, #Home_Page:visited {
     color: white;
