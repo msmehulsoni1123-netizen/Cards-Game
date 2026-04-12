@@ -1,0 +1,397 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url('Img Files/gamecardbg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+#header {
+    display: flex;
+    height: 10vh;
+    margin: 5vh;
+}
+#heading {
+    align-self: auto;
+    margin: auto;
+    align-self: center;
+    text-decoration: none;
+    font-optical-sizing: auto;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-variant: small-caps;               
+    font-size: 6.5vh;
+    background-clip: text;
+    color: rgb(255, 255, 255);  
+    transition: text-shadow 2s;
+}
+
+#heading span::selection {
+
+    color: transparent;
+    background-color:transparent;
+}
+
+#heading span:nth-child(6)::selection {
+    color: transparent;
+}
+#heading span:nth-child(6):hover::selection {
+    color: white;
+}
+#c1 {
+    text-shadow: 0 0 10px magenta;
+    -webkit-text-stroke: 1px magenta;
+    letter-spacing: 2px;
+}
+#c1:hover {
+    filter: brightness(150%);
+    transition: all 0.5s;
+    -webkit-text-stroke: 2px magenta;
+    text-shadow: 0 0 20px magenta; 
+}
+#c2 {
+    text-shadow: 0 0 10px #ea15ff;
+    -webkit-text-stroke: 1px #ea15ff;
+    letter-spacing: 2px;
+}
+#c2:hover {
+    filter: brightness(150%);
+    transition: all 0.5s;
+    -webkit-text-stroke: 2px #ea15ff;
+    text-shadow: 0 0 20px #ea15ff; 
+}
+#c3 {
+    text-shadow: 0 0 10px #d52bff;
+    -webkit-text-stroke: 1px #d52bff;
+    letter-spacing: 2px;
+}
+#c3:hover {
+    filter: brightness(150%);
+    transition: all 0.5s;
+    -webkit-text-stroke: 2px #d52bff;
+    text-shadow: 0 0 20px #d52bff; 
+}
+#c4 {
+    text-shadow: 0 0 10px #bf40ff;
+    -webkit-text-stroke: 1px #bf40ff;
+    letter-spacing: 2px;
+}
+#c4:hover {
+    filter: brightness(150%);
+    transition: all 0.5s;
+    -webkit-text-stroke: 2px #bf40ff;
+    text-shadow: 0 0 20px #bf40ff; 
+}
+#c5 {
+    text-shadow: 0 0 10px #aa55ff;
+    -webkit-text-stroke: 1px #aa55ff;
+    letter-spacing: 2px;
+}
+#c5:hover {
+    filter: brightness(150%);
+    transition: all 0.5s;
+    -webkit-text-stroke: 2px #aa55ff;
+    text-shadow: 0 0 20px #aa55ff; 
+}
+#c6 div {
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    display: none;
+}
+#c6 {
+    text-shadow: 0 0 20px #956aff;
+    -webkit-text-stroke: 2px #956aff;
+    letter-spacing: 2px;
+    color: transparent;
+    background-color:transparent;
+    animation-name: bulbflick;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1);
+}
+#c6:hover {
+    animation: burnout 20s ease-in-out;
+    color: transparent;
+    background-color: transparent;
+    text-shadow: 0 0 1px transparent;
+    -webkit-text-stroke: 1px transparent;
+    transition: all 3s ease-in-out 4s;
+    text-transform: uppercase;
+    font-variant: normal;
+}
+#c6:hover div {
+    display: block;
+    font-size: medium;
+    font-weight: 100%;
+}
+#c7 {
+    text-shadow: 0 0 10px #8080ff;
+    -webkit-text-stroke: 1px #8080ff;
+    letter-spacing: 2px;
+}
+#c7:hover {
+    filter: brightness(150%);
+    transition: all 0.5s;
+    -webkit-text-stroke: 2px #8080ff;
+    text-shadow: 0 0 20px #8080ff; 
+}
+#c8 {
+    text-shadow: 0 0 10px #6a95ff;
+    -webkit-text-stroke: 1px #6a95ff;
+    letter-spacing: 2px;
+}
+#c8:hover {
+    filter: brightness(150%);
+    transition: all 0.5s;
+    -webkit-text-stroke: 2px #6a95ff;
+    text-shadow: 0 0 20px #6a95ff; 
+}
+#c9 {
+    text-shadow: 0 0 10px #55aaff;
+    -webkit-text-stroke: 1px #55aaff;
+    letter-spacing: 2px;
+}
+#c9:hover {
+    filter: brightness(150%);
+    transition: all 0.5s;
+    -webkit-text-stroke: 2px #55aaff;
+    text-shadow: 0 0 20px #55aaff; 
+}
+#c10 {
+    text-shadow: 0 0 10px #40bfff;
+    -webkit-text-stroke: 1px #40bfff;
+    letter-spacing: 2px;
+}
+#c10:hover {
+    filter: brightness(150%);
+    transition: all 0.5s;
+    -webkit-text-stroke: 2px #40bfff;
+    text-shadow: 0 0 20px #40bfff; 
+}
+#c11 {
+    text-shadow: 0 0 10px #2ad5ff;
+    -webkit-text-stroke: 1px #2ad5ff;
+    letter-spacing: 2px;
+}
+#c11:hover {
+    filter: brightness(150%);
+    transition: all 0.5s;
+    -webkit-text-stroke: 2px #2ad5ff;
+    text-shadow: 0 0 20px #2ad5ff; 
+}
+#c12 {
+    text-shadow: 0 0 10px #15eaff;
+    -webkit-text-stroke: 1px #15eaff;
+    letter-spacing: 2px;
+}
+#c12:hover {
+    filter: brightness(150%);
+    transition: all 0.5s;
+    -webkit-text-stroke: 2px #15eaff;
+    text-shadow: 0 0 20px #15eaff; 
+}
+#c13 {
+    text-shadow: 0 0 10px #00ffff;
+    -webkit-text-stroke: 1px #00ffff;
+    letter-spacing: 2px;
+}
+#c13:hover {
+    filter: brightness(150%);
+    transition: all 0.5s;
+    -webkit-text-stroke: 2px #00ffff;
+    text-shadow: 0 0 20px #00ffff; 
+}
+
+#log_page:link, #log_page:visited {
+    color: white;
+    background-color:indigo;
+    padding: 20px;
+    text-decoration: none;
+    margin: 1vw;
+    cursor:not-allowed;
+    text-align: right;
+    font-size: 1.5vw;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+#log_page:active, #log_page:hover {
+    color: white;
+    background-color: rgb(100, 0, 180);
+    border: 3px solid rgb(255, 195, 255);
+    box-shadow: 0 0 10px 10px magenta;
+    border-radius: 10px;
+}
+#Home_Page:link, #Home_Page:visited {
+    color: transparent;
+    padding: 20px;
+    text-decoration: none;
+    margin: 1vw;
+    text-align: left;
+    font-size: 1.5vw;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    border-radius: 10px;
+    border: 3px none silver;
+}
+form {
+    display: flex;
+    height: 65vh;
+    margin: 5vh;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+#gamename {
+    position: relative;
+    color: transparent;
+    transition: text-shadow 1s ease-in-out;
+    text-shadow: 0 0 10px cyan;
+    -webkit-text-stroke: 0.5px cyan;
+    font-family: "Audiowide", sans-serif;
+    font-size: xx-large;
+    align-self: center;
+    margin: 20px;
+}            
+#gamename span:nth-child(12) {
+    color: white;
+    text-shadow: 0 0 12px blue;
+    -webkit-text-stroke: 1px blue;
+}
+#gamename span:nth-child(12):hover {
+    text-transform: uppercase;
+    text-shadow: 0 0 12px navy;
+    -webkit-text-stroke: 1px navy;
+}
+#gamename span:hover {
+    transition: text-shadow 0.5s;
+    text-shadow: 0 0 20px cyan;
+}
+#gamename::selection {
+    color: white;
+}
+#m1 div {
+    display: none;
+    position: absolute;
+    right: 0px;
+    overflow: visible;
+    word-wrap: nowrap;
+}
+#m1:hover div {
+    display: block;
+    font-size: small;
+}
+#name {
+    transition: border 2s;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    color: #00FFFF;
+    background-color: transparent;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    font-variant: small-caps;
+    height: fit-content;
+    width: fit-content;
+    font-variant: small-caps;
+    outline-style: none;
+    text-align: center;
+    align-self: center;
+    margin: 20px;
+    padding: 5px;
+}
+#name:focus {
+    border-bottom: 3px groove cyan;
+}
+#tocardgame {
+    position: relative;
+    align-self: center;
+    margin: 50px;
+    width: fit-content;
+    height: fit-content;
+
+    padding: 20px;
+    border-radius: 0.4vw;
+    font-size: 2vw;
+    border: 5px solid white;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: navy;
+    font-family: Sofia;
+}
+footer {
+    display: flex;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.516);
+}
+li {
+    color: white;
+    font-family: serif;
+    padding: 5px;
+    font-size: medium;
+}
+#tocardgame:hover, #tocardgame:active {
+    box-shadow: 0 0 8px 10px magenta;
+    background-color: rgb(0, 0, 92);
+    border-style: solid;
+    border-color: rgb(255, 184, 255);
+    cursor: pointer ;
+    border-width: 5px;
+    color: white;                   
+}
+
+/* Thunder's Animation Area */
+@keyframes bulbflick {
+    0%, 2%, 5%, 7%, 11%, 13%, 17%, 22%, 25%, 
+    29%, 31%, 33%, 36%, 40%, 44%, 48%, 59%, 
+    71%, 75%, 80%, 86%, 91%, 98%, 100% { /*On Area*/
+
+        filter: brightness(100%);
+        text-shadow: 0 0 15px #956aff;
+    }
+    1%, 4%, 6%, 12%, 15%, 18%, 24%, 27%, 30%, 
+    32%, 34%, 38%, 42%, 45%, 49%, 57%, 
+    62%, 73%, 78%, 82%, 85%, 87%, 92%, 96%, 99% { /*Off Area*/
+
+        filter: brightness(5%);
+        color: transparent;
+        text-shadow: 0 0 20px #956aff;
+    }
+    3%, 8%, 10%, 19%, 23%, 28%, 35%, 41%, 
+    46%, 60%, 66%, 70%, 74%, 79%, 
+    83%, 89%, 94%, 97% { /*Somewhere Middle*/
+        filter: brightness(50%);
+        color: transparent;
+        text-shadow: 0 0 25px #956aff;
+    }
+    50% { /*Burst*/
+        filter: brightness(1000%);
+        color: white;
+        text-shadow: 0 0 50px #956aff;
+    }
+}
+@keyframes burnout {
+    0%, 1.5%, 2.2% {filter: brightness(5%); color: white;}
+    1%, 1.9%, 2.8% {filter: brightness(100%); color: white;}
+    50% {filter: brightness(400%); color: white; text-shadow: 0 0 50px white;}
+    51%, 51.6%, 52.7% {filter: brightness(5%); color: white;}
+    51.5%,52%,53% {filter: brightness(400%); color: white; text-shadow: 0 0 50px white;}
+    95% {
+        filter: brightness(500%); 
+        color: white; 
+        text-shadow: 0 0 50px gold, 0 0 100px yellow, 0 0 150px white}
+    99.99% {
+        filter: brightness(500%); 
+        color: white; 
+        opacity: 100%;
+        text-shadow: 0 0 50px gold, 0 0 100px yellow, 0 0 150px white}
+    100% {filter: brightness(0%); color: transparent; text-shadow: none; opacity: 0%;}
+}
