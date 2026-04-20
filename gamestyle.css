@@ -18,7 +18,7 @@ body {
     font-family: Audiowide;
     font-size: xx-large;
     color: white;
-    text-shadow: 0 0 0.8vw cyan;
+    animation: pulsing 5s infinite;
 }
 #Home_Page:link, #Home_Page:visited {
     color: white;
@@ -73,6 +73,7 @@ body {
     perspective: 800px;
 }
 .card {
+    position: relative;
     border:3px solid cyan;
     border-radius: 1vw;
     height: 25vh;
@@ -80,24 +81,57 @@ body {
     margin: 1vw;
     padding: 0%;
     background-color: rgb(0, 0, 93);
+    transform-style: preserve-3d;
+    transform: rotateY('0deg');
 }
-.card div { 
-    height:100%;
+
+.card:hover {
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0 0 0.4vw 0.3vw cyan;
+    transition: transform 1s ease 0.5s, box-shadow 0.9s ease 1.3s, border 0.5s ease 0.9s;
+}
+
+#frontFace { 
+    position: absolute;
+    height: 100%;
     width:100%;
+    top: 0%;
+    left: 0%;
     border-radius: 0.9vw;
     background-image: url('Img Files/cardicon.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 100%;
+    margin: 0%;
+    padding: 0%;
+    backface-visibility: hidden;
 }
-.card div:hover {
-    transition: opacity 0.5s ease 0.5s;
-    opacity: 0%;
+
+#backFace {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    margin: 0%;
+    padding: 0%;
+    border-radius: 0.9vw;
+    background-color: red;
+    backface-visibility: hidden;
 }
-.card:hover {
-    border-color: rgb(255, 255, 255);
-    box-shadow: 0 0 0.4vw 0.3vw cyan;
-    transform: rotateY(180deg);
-    transition: transform 1s ease 0.5s, box-shadow 0.9s ease 1.3s, border 0.5s ease 0.9s;
+
+
+
+/* This designated precinct is strictly sequestered for 
+the exclusive manifestation of cinematographic sequences */
+@keyframes pulsing {
+    0%{text-shadow: 0 0 8px cyan;}
+    40% {text-shadow: 0 0 8px cyan;}
+    50% {text-shadow: 0 0 12px cyan;}
+    60% {text-shadow: 0 0 8px cyan;}
+    74.90% {text-shadow: 0 0 8px cyan;}
+    75% {text-shadow: 0 0 15px red;}
+    75.10% {text-shadow: 0 0 8px cyan;}
+    100% {text-shadow: 0 0 8px cyan;}
 }

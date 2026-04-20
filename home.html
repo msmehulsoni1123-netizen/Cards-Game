@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <link rel="icon" type="image/png" href="Img Files/cardicon.png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia">
@@ -12,17 +13,18 @@
 
         <title>Concentration</title>
     </head>
+
     <body>
         <header id="header">
             <a href="home.html" id="Home_Page">____</a>
             <div id="heading"><span id="c1">C</span><span id="c2">o</span><span id="c3">n</span><span id="c4">c</span><span id="c5">e</span><span id="c6">m<div>One of Mehul's Presentations</div></span><span id="c7">t</span><span id="c8">r</span><span id="c9">a</span><span id="c10">t</span><span id="c11">i</span><span id="c12">o</span><span id="c13">n</span></div>  
-            <a href="login.html" id="log_page" onclick="alert('Log In page is under-construction')">Log In</a>  
+            <a href="login.html" id="log_page" onclick="alert('Log In page is under-construction')" title="Not Working">Log In</a>  
         </header>
         <main>
             <form action="game.html">
-                <label for="gamename" id="gamename" >&nbsp;<span>E</span><span>n</span><span>t</span><span>e</span><span>r</span> <span>Y</span><span>o</span><span>u</span><span>r</span> <span>N</span><span>a</span><span id="m1">m<div>It's my Signature</div></span><span>e</span></label>
-                <input type="text" name="gamename" id="name" placeholder="Enter Name" required>
-                <input href="game.html" type="submit" id="tocardgame" name="gamename" value="Start Game">
+                <label for="gamename" id="gamename" >&nbsp;<span>E</span><span>n</span><span>t</span><span>e</span><span>r</span> <span>Y</span><span>o</span><span>u</span><span>r</span> <span title="N:I blight the supply">n</span><span>a</span><span id="m1">m<div>It's my Signature</div></span><span>e</span></label>
+                <input type="text" name="gamename" id="name" placeholder="Enter Name" maxlength="18" required>
+                <div id="toGameBg"><input href="game.html" type="submit" id="toGame" name="gamename" value="Start Game" onclick="assignName()">Start Game</div>
             </form>
         </main>
         <footer>
@@ -31,5 +33,9 @@
             </ul>    
             
         </footer>
+
+        <!-- JavaScript FIle area -->
+        <script src="homelogic.js"></script>
+        <script src="commonstuff.js"></script>
     </body>
 </html>
