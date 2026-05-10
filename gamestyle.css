@@ -1,3 +1,6 @@
+* {
+    cursor: url('/blue/normal.cur'), auto;
+}
 body {
     background-image: url('Img Files/gamecardbg.jpg');
     background-attachment: fixed;
@@ -36,6 +39,7 @@ body {
 }
 #Home_Page:active, #Home_Page:hover {
     color: white;
+    cursor: url('/blue/link.cur'), pointer;
     background-color: rgb(100, 0, 180);
     border: 3px solid white;
     box-shadow: 0 0 10px 10px magenta;
@@ -57,6 +61,7 @@ body {
 }
 #log_page:active, #log_page:hover {
     color: white;
+    cursor: url('/blue/unavailable.cur'), not-allowed;
     background-color: rgb(100, 0, 180);
     border: 3px solid white;
     border-radius: 10px;

@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    cursor: url('/blue/normal.cur'), auto;
 }
 
 body {
@@ -125,7 +126,7 @@ body {
     letter-spacing: 2px;
     color: transparent;
     background-color:transparent;
-    animation-name: bulbflick;
+    animation-name: bulbFlicker;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -134,6 +135,7 @@ body {
 #c6:hover {
     animation: burnout 20s ease-in-out;
     color: transparent;
+    cursor: url('/blue/help.cur'), help;
     background-color: transparent;
     text-shadow: 0 0 1px transparent;
     -webkit-text-stroke: 1px transparent;
@@ -342,6 +344,7 @@ form {
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: x-large;
+    cursor: url('/blue/text.cur'), text;
     font-variant: small-caps;
     height: fit-content;
     width: fit-content;
@@ -429,15 +432,30 @@ li {
 }
 
 /* Thunder's Animation Area */
-@keyframes bulbflick {
+
+:root {
+    /* Change this color to change the whole theme */
+    --glow-color: #956aff; 
+}
+
+@keyframes bulbFlicker {
+    /* --- CONFIGURATION --- */
+
+    /* --- PHASE 1: THE STRUGGLE (0% - 25%) --- */
+    
+    /* The "On" flickers */
     0%, 0.1%, 0.2%, 0.5%, 0.7%, 1.1%, 1.3%, 1.7%, 2.2%, 2.5%, 
     2.9%, 3.1%, 3.3%, 3.6%, 4.0%, 4.4%, 4.8%, 5.9%, 7.1%, 7.5%, 
     8.0%, 8.6%, 9.1%, 9.8%, 10%, 11%, 12%, 13%, 14%, 15%, 
-    16%, 17%, 18%, 19%, 20%, 21%, 22%, 23%, 24%, 25%{ /*On Area*/
+    16%, 17%, 18%, 19%, 20%, 21%, 22%, 23%, 24%, 25% {
+        opacity: 1;
         filter: brightness(100%);
-        text-shadow: 0 0 15px #956aff;
+        color: #fff; /* Ensure text is white when on */
+        text-shadow: 0 0 15px var(--glow-color), 0 0 30px var(--glow-color);
+        transform: scale(1); /* Normal size */
     }
     
+    /* The "Off" flickers (Ghosting) */
     0.05%, 0.15%, 0.25%, 0.35%, 0.45%, 0.55%, 0.65%, 0.75%, 0.85%, 0.95%,
     1.05%, 1.15%, 1.25%, 1.45%, 1.55%, 1.65%, 1.75%, 1.85%, 1.95%, 2.05%,
     2.15%, 2.35%, 2.45%, 2.55%, 2.65%, 2.75%, 2.85%, 2.95%, 3.05%, 3.15%,
@@ -447,28 +465,118 @@ li {
     6.25%, 6.35%, 6.45%, 6.55%, 6.65%, 6.75%, 6.85%, 6.95%, 7.05%, 7.15%,
     7.25%, 7.35%, 7.45%, 7.55%, 7.65%, 7.75%, 7.85%, 7.95%, 8.05%, 8.15%,
     8.25%, 8.35%, 8.45%, 8.55%, 8.65%, 8.75%, 8.85%, 8.95%, 9.05%, 9.15%,
-    9.25%, 9.35%, 9.45%, 9.55%, 9.65%, 9.75%, 9.85%, 9.95% { /*Off Area*/
-        filter: brightness(5%);
-        outline-color: none;
-        border: none;
+    9.25%, 9.35%, 9.45%, 9.55%, 9.65%, 9.75%, 9.85%, 9.95% {
+        opacity: 0.4; /* Semi-transparent ghost */
+        filter: brightness(10%);
         color: transparent;
-        text-shadow: 0 0 20px #956aff;
+        text-shadow: 0 0 20px var(--glow-color);
+        transform: scale(0.98); /* Slight shrink */
     }
     
+    /* The "Middle" flickers (Dim) */
     0.03%, 0.08%, 0.1%, 0.19%, 0.23%, 0.28%, 0.35%, 0.41%, 
-    0.46%, 0.6%, 0.66%, 0.7%, 0.74%, 0.79%, 0.83%, 0.89%, 0.94%, 0.97% { /*Somewhere Middle*/
+    0.46%, 0.6%, 0.66%, 0.7%, 0.74%, 0.79%, 0.83%, 0.89%, 0.94%, 0.97% {
+        opacity: 0.7;
         filter: brightness(50%);
         color: transparent;
-        text-shadow: 0 0 25px #956aff;
+        text-shadow: 0 0 25px var(--glow-color);
+        transform: scale(0.99);
     }
     
-    50% { /*Burst*/
-        filter: brightness(1000%);
+    /* --- PHASE 2: THE BURST (50%) --- */
+    50% {
+        opacity: 1;
+        filter: brightness(1000%) contrast(120%);
         color: white;
-        outline-color: white;
-        text-shadow: 0 0 50px #956aff;
+        text-shadow: 0 0 50px var(--glow-color), 0 0 100px white;
+        transform: scale(1.2); /* EXPLODE effect */
+    }
+    
+    /* --- PHASE 3: THE UNSTABLE RECOVERY (51% - 60%) --- */
+    51%, 51.5%, 52%, 52.5%, 53%, 53.5%, 54% {
+        opacity: 1;
+        filter: brightness(400%);
+        color: white;
+        text-shadow: 0 0 50px var(--glow-color);
+        transform: scale(1.05);
+    }
+    
+    51.2%, 51.8%, 52.3%, 52.8%, 53.3%, 53.8% {
+        opacity: 0.3;
+        filter: brightness(20%);
+        color: transparent;
+        text-shadow: 0 0 15px var(--glow-color);
+        transform: scale(0.95);
+    }
+    
+    54.5%, 55%, 55.5%, 56%, 56.5%, 57%, 57.5%, 58%, 58.5%, 59%, 59.5% {
+        opacity: 1;
+        filter: brightness(200%);
+        color: white;
+        text-shadow: 0 0 30px var(--glow-color);
+        transform: scale(1.02);
+    }
+    
+    54.8%, 55.3%, 55.8%, 56.3%, 56.8%, 57.3%, 57.8%, 58.3%, 58.8%, 59.3%, 59.8% {
+        opacity: 0.2;
+        filter: brightness(15%);
+        color: transparent;
+        text-shadow: 0 0 10px var(--glow-color);
+        transform: scale(0.95);
+    }
+    
+    /* --- PHASE 4: STABILIZING (60% - 70%) --- */
+    60%, 61%, 62%, 63%, 64%, 65%, 66%, 67%, 68%, 69%, 70% {
+        opacity: 1;
+        filter: brightness(100%);
+        color: white;
+        text-shadow: 0 0 15px var(--glow-color);
+        transform: scale(1);
+    }
+    
+    60.5%, 61.5%, 62.5%, 63.5%, 64.5%, 65.5%, 66.5%, 67.5%, 68.5%, 69.5% {
+        opacity: 0.2;
+        filter: brightness(8%);
+        color: transparent;
+        text-shadow: 0 0 8px var(--glow-color);
+        transform: scale(0.98);
+    }
+    
+    /* --- PHASE 5: DIMMING (71% - 85%) --- */
+    71%, 72%, 73%, 74%, 75%, 76%, 77%, 78%, 79%, 80%, 81%, 82%, 83%, 84%, 85% {
+        opacity: 0.8;
+        filter: brightness(50%);
+        color: white;
+        text-shadow: 0 0 10px var(--glow-color);
+        transform: scale(0.98);
+    }
+    
+    71.5%, 72.5%, 73.5%, 74.5%, 75.5%, 76.5%, 77.5%, 78.5%, 79.5%, 80.5%, 81.5%, 82.5%, 83.5%, 84.5% {
+        opacity: 0.1;
+        filter: brightness(5%);
+        color: transparent;
+        text-shadow: 0 0 5px var(--glow-color);
+        transform: scale(0.95);
+    }
+    
+    /* --- PHASE 6: DYING (90% - 100%) --- */
+    90%, 95% {
+        opacity: 0.1;
+        filter: brightness(10%);
+        color: transparent;
+        text-shadow: 0 0 3px var(--glow-color);
+        transform: scale(0.9);
+    }
+    
+    100% {
+        opacity: 0;
+        filter: brightness(0%);
+        color: transparent;
+        text-shadow: none;
+        transform: scale(0.8);
     }
 }
+
 
 @keyframes burnout {
     0%, 1.5%, 2.2% {filter: brightness(5%); color: white; -webkit-text-stroke: 1px white;}
@@ -493,7 +601,7 @@ li {
         filter: brightness(500%); 
         color: white; 
         opacity: 100%;
-        text-shadow: 0 0 50px gold, 0 0 100px yellow, 0 0 150px white
+        text-shadow: 0 0 50px gold, 0 0 100px yellow, 0 0 150px gold
     }
         
     100% {filter: brightness(0%); color: transparent; text-shadow: none; opacity: 0%;}
